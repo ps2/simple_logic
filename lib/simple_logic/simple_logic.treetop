@@ -1,0 +1,30 @@
+grammar SimpleLogic
+  rule expression
+    infix_operation / primary
+  end
+
+  rule infix_operation
+    lhs:infix_operation_chain rhs:primary <InfixOperation>
+  end
+
+  rule infix_operation_chain
+    (primary space operator space)+ <InfixOperationChain>
+  end
+
+  rule space
+    " "*
+  end
+
+  rule operator
+    "&&" / "||"
+  end
+
+  rule primary
+    flag / "!" primary <NegationOperator> / '(' expression ')'
+  end
+
+  rule flag
+    name:[\w]+ <Flag>
+  end
+  
+end
