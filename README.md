@@ -18,7 +18,9 @@ Or install it yourself as:
 
 ## Usage
 
-in_luck = SimpleLogic.eval("hungry && !fridge_empty || restaurant_nearby", )
+    context = { hungry: true, fridge_empty: true, restaurant_nearby: true}
+    in_luck = SimpleLogic.eval("hungry && !fridge_empty || restaurant_nearby", context)
+    # => true
 
 ## Contributing
 
