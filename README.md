@@ -24,6 +24,7 @@ in_luck = SimpleLogic.eval("hungry && !fridge_empty || restaurant_nearby", conte
 # => true
 ```
 
+
 ## Contributing
 
 1. Fork it
