@@ -20,11 +20,11 @@ grammar SimpleLogic
   end
 
   rule primary
-    flag / "!" primary <NegationOperator> / '(' expression ')'
+    variable / "!" primary <NegationOperator> / '(' expression ')'
   end
 
-  rule flag
-    name:[\w]+ <Flag>
+  rule variable
+    name:[\w]+ <Variable>
   end
   
 end

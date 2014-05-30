@@ -1,6 +1,7 @@
-require "simple_logic/version"
+require "simple_logic/errors"
 require "simple_logic/parser"
 require "simple_logic/precedence_table"
+require "simple_logic/version"
 require "simple_logic/syntax_nodes"
 require 'treetop'
 

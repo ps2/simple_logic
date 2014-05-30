@@ -1,12 +1,6 @@
 require 'treetop'
 
 module SimpleLogic
-  class ParseError < StandardError
-    attr_reader :offset
-    def initialize(offset)
-      @offset = offset
-    end
-  end
 
   class Parser
     base_path = File.expand_path(File.dirname(__FILE__))

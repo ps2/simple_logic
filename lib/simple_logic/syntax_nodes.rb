@@ -57,13 +57,13 @@ module SimpleLogic
     end
   end
 
-  class Flag < Treetop::Runtime::SyntaxNode
+  class Variable < Treetop::Runtime::SyntaxNode
     def eval(context)
       key = text_value.to_sym
       if context.include?(key)
         context[key]
       else
-        raise Exception, "Undefined flag: #{text_value}"
+        raise UndefinedVariableError, "Undefined variable: \"#{text_value}\""
       end
     end
   end
