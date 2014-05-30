@@ -2,6 +2,11 @@
 
 A ruby gem that parses and evaluates simple boolean statements specified as a string.  Useful for evaluating user supplied business rules in your application without using ruby's eval().
 
+[![Build Status](https://travis-ci.org/ps2/simple_logic.svg?branch=master)][travis]
+
+
+[travis]: http://travis-ci.org/ps2/simple_logic
+
 ## Installation
 
 Add this line to your application's Gemfile:
