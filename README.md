@@ -1,6 +1,6 @@
 # SimpleLogic
 
-A ruby gem that parses and evaluates simple boolean statements specified as a string.  Useful for evaluating user supplied input in your application without using ruby's eval().
+A ruby gem that parses and evaluates simple boolean statements specified as a string.  Useful for evaluating user supplied business rules in your application without using ruby's eval().
 
 ## Installation
 
