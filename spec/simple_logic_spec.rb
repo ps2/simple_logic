@@ -53,7 +53,11 @@ describe SimpleLogic do
   it "should raise an exception on undefined variable" do
     expect { 
       SimpleLogic.eval("testing && hungry", {testing: true}) 
-    }.to raise_error(SimpleLogic::UndefinedVariableError)
+    }.to raise_error(SimpleLogic::UndefinedVariableError) {|e|
+      expect(e.offset).to eq 11
+      expect(e.name).to eq "hungry"
+    }
+
   end
 
 end

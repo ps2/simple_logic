@@ -7,9 +7,10 @@ module SimpleLogic
   end
 
   class UndefinedVariableError < StandardError
-    attr_reader :offset
-    def initialize(offset)
+    attr_reader :offset, :name
+    def initialize(offset, name)
       @offset = offset
+      @name = name
     end
   end
 

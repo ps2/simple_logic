@@ -63,7 +63,7 @@ module SimpleLogic
       if context.include?(key)
         context[key]
       else
-        raise UndefinedVariableError, "Undefined variable: \"#{text_value}\""
+        raise UndefinedVariableError.new(interval.first, text_value), "Undefined variable: \"#{text_value}\""
       end
     end
   end
